@@ -1,13 +1,13 @@
 <div class="span16">
   <header class="page-header">
-    <h2>Your authorized applications</h2>
+    <h2>已授权应用</h2>
   </header>
 
   <table class="zebra-striped">
     <thead>
       <tr>
-        <th>Application</th>
-        <th>Created At</th>
+        <th>应用</th>
+        <th>创建时间</th>
         <th></th>
         <th></th>
       </tr>
@@ -17,7 +17,7 @@
         <tr>
           <td><%= application.name %></td>
           <td><%= application.created_at %></td>
-          <td><%= link_to 'Revoke', oauth_authorized_application_path(application), :data => { :confirm => 'Are you sure?' }, :method => :delete, :class => 'btn danger' %></td>
+          <td><%= link_to '撤销', oauth_authorized_application_path(application), :data => { :confirm => 'Are you sure?' }, :method => :delete, :class => 'btn danger' %></td>
         </tr>
       <% end %>
     </tbody>
